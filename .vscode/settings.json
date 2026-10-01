@@ -1,0 +1,8 @@
+{
+  "python.defaultInterpreterPath": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+  "git.path": "C:\\Users\\xavier.nunn\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\git\\cmd\\git.exe",
+  "git.enabled": true,
+  "terminal.integrated.env.windows": {
+    "PATH": "C:\\Users\\xavier.nunn\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\git\\cmd;${env:PATH}"
+  }
+}
