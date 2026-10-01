@@ -7,6 +7,14 @@ COMMAND_SPEC = CommandSpec("commands", "None", "Lists commands, descriptions, ar
 
 class CommandsCommand(BaseCommand):
     def run(self, args, context: ToolContext) -> str:
+        self.require_count(args, 0, "Unexpected arguments given")
+        sections_list = []
+        for spec in context.registry.specs:
+            sections_list.append(f"{spec.name}\n{spec.description}\n{spec.args}\n{spec.usage}\n{spec.expected_output}")
+
+        return "\n\n".join(sections_list)
+
+
         # TODO: Build a readable reference from ``context.registry.specs``.
         # 1. This command accepts no arguments.
         # 2. Loop over every discovered CommandSpec.
